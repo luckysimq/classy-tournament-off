@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLASSY TOURNAMENT Official</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(180deg, #0f0f0f, #1a1a1a);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #000;
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+      border-bottom: 3px solid #ffb700;
+      overflow: hidden;
+    }
+
+    .animated-title {
+      display: inline-block;
+      font-family: 'Bebas Neue', cursive;
+      font-size: 60px;
+      color: #ffb700;
+      letter-spacing: 2px;
+      position: relative;
+      animation: slideIn 2s ease-out forwards;
+    }
+
+    .animated-title span.crown {
+      position: absolute;
+      top: -25px;
+      left: 125px;
+      width: 30px;
+      height: 30px;
+      background-image: url('/mnt/data/download.jpg');
+      background-size: cover;
+      animation: crownPop 1s ease-out 2s forwards;
+      opacity: 0;
+    }
+
+    @keyframes slideIn {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes crownPop {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .slots {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      background: #ff004c;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .banner {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .info {
+      padding: 50px 20px;
+      background: #121212;
+      text-align: center;
+      border-radius: 30px 30px 0 0;
+    }
+
+    .info h2 {
+      color: #ffb700;
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .info-table {
+      display: inline-block;
+      text-align: left;
+      font-size: 18px;
+      background: #1e1e1e;
+      border: 2px solid #ff004c;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(255, 0, 76, 0.4);
+    }
+
+    .info-table p {
+      margin: 12px 0;
+      color: #e0e0e0;
+    }
+
+    .info-table strong {
+      color: #00ffaa;
+    }
+
+    .register {
+      text-align: center;
+      margin: 60px 0 40px;
+    }
+
+    .register button {
+      background: linear-gradient(90deg, #ff004c, #ffb700);
+      color: #000;
+      border: none;
+      padding: 15px 40px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(255, 0, 76, 0.5);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .register button:hover {
+      transform: scale(1.05);
+    }
+
+    .qr-section {
+      display: none;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .qr-section img {
+      max-width: 220px;
+      margin-bottom: 15px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 183, 0, 0.4);
+    }
+
+    .invite-link {
+      display: none;
+      font-size: 16px;
+      color: #00ffaa;
+    }
+
+    a {
+      color: #00ffaa;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="slots">8/48</div>
+    <div class="animated-title">
+      CLASSY TOURNAMENT <span class="crown"></span>
+    </div>
+  </header>
+
+  <img class="banner" src="/mnt/data/file-4pYb28ArPndYR9APnXrLLU" alt="Free Fire Banner">
+
+  <section class="info">
+    <h2>Booyah Prize | Per Kill Reward | Entry Fee</h2>
+    <div class="info-table">
+      <p><strong>Top 1:</strong> 500rs | 25rs | 50rs</p>
+      <p><strong>Top 2:</strong> 200rs</p>
+      <p><strong>Top 3:</strong> 100rs</p>
+    </div>
+  </section>
+
+  <div class="register">
+    <button onclick="showQR()">Register Now</button>
+    <div class="qr-section" id="qr">
+      <img src="/mnt/data/b27c9c74-4db3-4c5b-8534-601732d24b02.png" alt="QR Code">
+      <p class="invite-link" id="invite">Join Discord: <a href="https://discord.gg/4ZVas88F" target="_blank">Click Here</a></p>
+    </div>
+  </div>
+
+  <script>
+    function showQR() {
+      document.getElementById("qr").style.display = "block";
+      document.getElementById("invite").style.display = "block";
+    }
+  </script>
+</body>
+</html>
